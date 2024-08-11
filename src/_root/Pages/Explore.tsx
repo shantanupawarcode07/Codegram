@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Input } from "@/components/ui/input";
 import GridPostList from "@/components/ui/Shared/GridPostList";
 import Loader from "@/components/ui/Shared/Loader";
@@ -101,7 +102,7 @@ const Explore = () => {
           <p className="text-light-4 mt-10 text-center w-full">End of posts</p>
         ) : (
           posts.pages.map((item, index) => (
-            <GridPostList key={`page-${index}`} posts={item?.documents} />
+            <GridPostList key={`page-${index}`} posts={item.documents} />
           ))
         )}
       </div>
